@@ -1,0 +1,14 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://spring-eureka-server:8761/eureka/
+  instance:
+    hostname: spring-eureka-server
+
+microservice:
+  order-service:
+    endpoints:
+      endpoint:
+        uri: http://customer-service/customer/
